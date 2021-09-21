@@ -3,6 +3,7 @@ import axios from "axios";
 
 // import components
 import UserImage from "../../asset/reddit.png"
+import UserInfo from "../../Components/UserInfo";
 
 const ProfileContainer = () => {
 
@@ -37,6 +38,14 @@ const ProfileContainer = () => {
 
       <section id="user-info">
         <img id="profile-img" src={UserImage} alt="User Profile" />
+      </section>
+
+      <section id="user-data">
+        {
+          user.map(({title, value}) => {
+            return <UserInfo sectionTitle={title} sectionValue={value} key={title} />
+          })
+        }
       </section>
     </div>
   )
