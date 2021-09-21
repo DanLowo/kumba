@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const NavBar = () => {
+// import components
+import NavigationDrawer from "./NavigationDrawer";
+
+const NavBarComponent = () => {
+
+  const [openNavBar, setOpenBar] = useState(false)
+
   return (
     <nav id="navbar">
       <h1>Kumba</h1>
@@ -11,8 +17,14 @@ const NavBar = () => {
           <li>Orders</li>
         </ul>
       </div>
+      <div id="navbar-menu">
+        <p onClick={() => setOpenBar(!openNavBar)} className="fas fa-align-justify"> </p>
+      </div>
+
+      {/*Navigation Drawer*/}
+      {openNavBar && <NavigationDrawer /> }
     </nav>
   )
 }
 
-export default NavBar;
+export default NavBarComponent;
