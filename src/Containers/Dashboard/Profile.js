@@ -4,6 +4,7 @@ import axios from "axios";
 // import components
 import UserImage from "../../asset/reddit.png"
 import UserInfo from "../../Components/UserInfo";
+import Button from "../../Components/Button";
 
 const ProfileContainer = () => {
 
@@ -40,6 +41,10 @@ const ProfileContainer = () => {
         <img id="profile-img" src={UserImage} alt="User Profile" />
       </section>
 
+      <section id="actions">
+        <Button text="Edit Profile" route="/" icon="fas fa-user" iconPosition="left" />
+        <Button text="Change Picture" route="/" icon="fas fa-camera" iconPosition="left" />
+      </section>
       <section id="user-data">
         {
           user.map(({title, value}) => {
@@ -47,6 +52,8 @@ const ProfileContainer = () => {
           })
         }
       </section>
+      <br />
+      <Button text="View All Orders" route="/orders" dark fullWidth iconPosition="right" icon="fas fa-chevron-right" />
     </div>
   )
 }
