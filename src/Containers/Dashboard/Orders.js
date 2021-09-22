@@ -73,6 +73,7 @@ const OrdersContainer = () => {
     return (
       <div id="actions">
         <Button disabled={disableBack} text="Back" iconPosition="left" dark icon="fas fa-chevron-left" onClick={() => backTable(count, Data.items)} />
+        <span className="count">{count}</span>
         <Button disabled={disableNext} text="Next" iconPosition="right" dark icon="fas fa-chevron-right" onClick={() => nextTable(count, Data.items)} />
       </div>
     )
