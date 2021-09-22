@@ -10,6 +10,7 @@ import OrdersContainer from "./Containers/Dashboard/Orders";
 import NavBarComponent from "./Components/NavBar";
 
 import LoadingImage from './asset/loading.webp'
+import NavigationDrawer from "./Components/NavigationDrawer";
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -32,7 +33,8 @@ const App = () => {
           <>
             <NavBarComponent />
             <div id="dashboard">
-              <div>
+              <NavigationDrawer id="navigation-drawer" />
+              <div id="dashboard-containers">
                 <Switch>
                   <Route exact path="/" component={ProfileContainer} />
                   <Route path="/orders" component={OrdersContainer} />
