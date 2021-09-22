@@ -110,19 +110,30 @@ a{
 
 #dashboard {
     padding-top: 70px;
-    display: flex;
-    gap: 20px;
+    /*display: flex;*/
+    /*gap: 20px;*/
+    /*justify-content: center;*/
 }
 
-#dashboardSideBar {
+#dashboard #navigation-drawer {
     position: fixed;
-    height: 90vh;
-    width: 30vw;
-    border-right: 1px solid grey;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 38vw;
+    border-right: 1px solid lightgrey;
+    background-color: var(--primary-color);
+}
+
+@media (max-width:600px) {
+    #dashboard #navigation-drawer {
+        display: none;
+    }
 }
 
 #dashboard-containers {
-    margin-left: 32vw;
+    margin-left: 40vw;
 }
 
 @media screen and (max-width: 550px) {
@@ -143,9 +154,7 @@ a{
 #profile-container {
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
-    margin: 30px 0 30px 0;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 15px 30px 15px;
 }
 
 #profile-img {
@@ -253,7 +262,7 @@ button:hover span.icon {
 
 /*Orders Container styles*/
 #orders {
-    padding: 10px;
+    padding: 0 5px 50px;
 }
 
 #orders h3.section-title {
@@ -282,25 +291,30 @@ button:hover span.icon {
 
 .order-summary-box h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .order-summary-box p {
     margin-top: 10px;
     color: grey;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .order-summary-box span {
     display: flex;
     align-self: center;
-    font-size: 30px;
+    font-size: 25px;
     color: var(--primary-color);
 }
 
 #recent-orders {
    width: 100%;
-    overflow-x: scroll;
+}
+
+@media (max-width: 550px) {
+    #recent-orders {
+        overflow-x: scroll;
+    }
 }
 
 #recent-orders table th {
@@ -313,18 +327,28 @@ button:hover span.icon {
 
 #recent-orders th {
     padding: 8px 27px 8px 8px;
-    font-size: 18px;
+    font-size: 14px;
 }
 #recent-orders td {
     padding: 8px 27px 8px 8px;
-    /*font-size: 18px;*/
+    font-size: 12px;
 }
 
 #recent-orders td span {
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 #orders #actions span.count {
     padding-top: 10px;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+#orders #restaurant p {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    #profile-container, #orders {
+        padding: 15px 15vw 30px;
+    }
 }
