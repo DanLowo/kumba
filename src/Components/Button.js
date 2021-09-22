@@ -14,10 +14,10 @@ const Button = ({text, route, icon, iconPosition, dark, fullWidth, onClick, disa
         </Link>
       )
       : (
-            <button style={disabled ? {backgroundColor: 'lightgrey', borderColor: 'lightgrey'} : {}} disabled={disabled} onClick={onClick} className={`${(dark && 'dark') || ''} ${(fullWidth && 'fullWidth') || ''}`}>
-              {iconPosition === 'left' && <span className={`${icon} icon`}/>}
+            <button style={disabled ? {backgroundColor: 'lightgrey', borderColor: 'lightgrey', color: 'black'} : {}} disabled={disabled} onClick={onClick} className={`${(dark && 'dark') || ''} ${(fullWidth && 'fullWidth') || ''}`}>
+              {iconPosition === 'left' && <span className={`${icon} icon`} style={disabled ? {color: 'black'} : {}}/>}
               {text}
-              {iconPosition === 'right' && <span className={`${icon} icon`}/>}
+              {iconPosition === 'right' && <span className={`${icon} icon`} style={disabled ? {color: 'black'} : {}}/>}
             </button>
         )
     }
