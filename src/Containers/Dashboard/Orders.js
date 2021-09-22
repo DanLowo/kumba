@@ -140,6 +140,7 @@ const OrdersContainer = () => {
           <OrderSummaryBox title="Total Order Placed" value={totalOrders} icon="fas fa-utensils" />
           <OrderSummaryBox title="Total Money Spent" value={totalMoneySpent} moneyIcon icon="fas fa-money-bill-wave" />
           <OrderSummaryBox title="Total Tax Paid" value={totalTaxPaid} moneyIcon icon="fas fa-lightbulb" />
+          <OrderSummaryBox />
         </div>
       </section>
 
