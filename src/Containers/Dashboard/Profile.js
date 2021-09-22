@@ -5,20 +5,19 @@ import axios from "axios";
 import UserImage from "../../asset/reddit.png"
 import UserInfo from "../../Components/UserInfo";
 import Button from "../../Components/Button";
-import Data from '../../asset/assignment.json'
 
 const ProfileContainer = () => {
 
-  const [user, setUser] = useState([] || Data)
+  const [user, setUser] = useState([])
 
   const getUser = async () => {
     const userArr = []
     try {
       // get users data from api
-      // const { data : { user } } = await axios.get('https://indapi.kumba.io/webdev/assignment')
+      const { data : { user } } = await axios.get('https://indapi.kumba.io/webdev/assignment')
 
       // make an array for all the keys and values of the user data
-      Object.entries(Data.user).map((keyValue) => {
+      Object.entries(user).map((keyValue) => {
         userArr.push({ title: keyValue[0], value: keyValue[1] })
       })
 
