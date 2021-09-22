@@ -13,6 +13,8 @@ const Table = ({tableHeaders, tableItems}) => {
   const displayTableItems = (items) => {
     return items.map((item, k) => {
       const { name, category, price, quantity, tax_pct } = item
+      const totalPrice = price * quantity
+      const totalPriceWithTax = totalPrice - (totalPrice * (Number(tax_pct)/100))
       if(k <= 6) {
         return (
           <tr key={k}>
@@ -20,8 +22,8 @@ const Table = ({tableHeaders, tableItems}) => {
             <td>{category}</td>
             <td>{price}</td>
             <td>{quantity}</td>
-            <td>{tax_pct}</td>
-            <td>{price * quantity}</td>
+            <td>{tax_pct}%</td>
+            <td><span className="fas fa-rupee-sign">{totalPriceWithTax}</span></td>
           </tr>
         )
       }
