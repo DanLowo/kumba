@@ -85,9 +85,9 @@ const OrdersContainer = () => {
       <section id="overview">
         <h3 className="section-title">Overview</h3>
         <div id="order-summary">
-          <OrderSummaryBox title="Total Order Placed" value="24" />
-          <OrderSummaryBox title="Total Money Spent" value="$1,500" />
-          <OrderSummaryBox title="Total Tax Paid" value="$120" />
+          <OrderSummaryBox title="Total Order Placed" value={Data.items.length} icon="fas fa-utensils" />
+          <OrderSummaryBox title="Total Money Spent" value="$1,500" icon="fas fa-money-bill-wave" />
+          <OrderSummaryBox title="Total Tax Paid" value="$120" icon="fas fa-lightbulb" />
         </div>
       </section>
 
