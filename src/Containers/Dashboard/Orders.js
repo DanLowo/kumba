@@ -143,6 +143,15 @@ const OrdersContainer = () => {
         </div>
       </section>
 
+      <section id="restaurant">
+        <h3>Restaurant:</h3>
+        <p>Name: {restaurant.name}</p>
+        <p>Street: {restaurant.street}</p>
+        <p>City: {restaurant.city}</p>
+        <p>State: {restaurant.state}</p>
+        <p>Zipcode: {restaurant.zipcode}</p>
+      </section>
+
       <section>
         <h3 className="section-title">Recent Orders</h3>
         <div id="recent-orders">
